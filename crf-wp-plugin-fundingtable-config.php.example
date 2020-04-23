@@ -1,0 +1,5 @@
+<?php
+// Defines the identifier used to validate the request
+define('CFCFT_FUNDING_TABLE_WEBHOOK_IDENTIFIER', "xxxxxxxxxxxxxxxxxx");
+// Defines the option name for the table data
+define('CFCFT_FUNDING_TABLE_DATA_OPTION', "xxxxxxxxxxxxxxxxxx");
