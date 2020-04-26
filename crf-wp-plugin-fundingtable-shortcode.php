@@ -1,0 +1,11 @@
+<?php
+
+function cfct_shortcode_funding_table_gen($atts) {
+    $table_data = crf_shortcode_funding_table_get_table_data();
+    ob_start();
+    include __DIR__ . "/partials/table.php";
+    $content = ob_get_clean();
+    return $content;
+}
+
+add_shortcode('fundingtable', 'cfct_shortcode_funding_table_gen');

@@ -11,6 +11,7 @@
 
 // Loads the configuration
 include_once "crf-wp-plugin-fundingtable-config.php";
+include_once "crf-wp-plugin-fundingtable-shortcode.php";
 
 // Register a function to run on plugin activation
 register_activation_hook(__FILE__, 'cfcft_initialize_plugin');
@@ -49,3 +50,8 @@ function cfcft_save_table_data($return_args, $identifier, $response_body) {
     // Return the parameters
     return $return_args;
 }
+
+function crf_shortcode_funding_table_get_table_data() {
+    $table_json = get_option(CFCFT_FUNDING_TABLE_DATA_OPTION);
+    return json_decode($table_json);
+} 
