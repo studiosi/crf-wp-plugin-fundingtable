@@ -11,7 +11,10 @@
 
 // Loads the configuration
 include_once "crf-wp-plugin-fundingtable-config.php";
+// Loads the shortcodes
 include_once "crf-wp-plugin-fundingtable-shortcode.php";
+// Loads the AJAX definitions
+include_once "crf-wp-plugin-fundingtable-ajax.php";
 
 // Register a function to run on plugin activation
 register_activation_hook(__FILE__, 'cfcft_initialize_plugin');
